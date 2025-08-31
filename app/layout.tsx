@@ -5,9 +5,8 @@ import { Suspense } from "react"
 import "./globals.css"
 
 export const metadata: Metadata = {
-  title: "v0 App",
-  description: "Created with v0",
-  generator: "v0.app",
+  title: "AI Thumbnail Maker",
+  description: "Made by Mohd Rahban Ghani",
 }
 
 export default function RootLayout({
@@ -19,6 +18,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/fonts.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playwrite+IN:wght@100..400&display=swap" rel="stylesheet" />
       </head>
       <body className="font-sans">
         <Suspense fallback={null}>{children}</Suspense>

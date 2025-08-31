@@ -1,5 +1,5 @@
-import SparklesPreview from "@/components/sparkles-fullpage-demo"
+import Home from "@/components/home"
 
 export default function Page() {
-  return <SparklesPreview />
+  return <Home />
 }

@@ -1,6 +1,23 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
+/* Custom Font Faces */
+@font-face {
+  font-family: 'Primary Font';
+  src: url('/fonts/ynvZ9zgdGPvEsLnO2wqmt1FsQ.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Secondary Font';
+  src: url('/fonts/HyYEverMlcmFib09tUpE8ZckZlU.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:is(.dark *));
 
 :root {
@@ -75,9 +92,10 @@
 }
 
 @theme inline {
-  /* Updated to use Grafolita Script font */
-  --font-sans: "grafolita-script", sans-serif;
-  --font-mono: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  /* Updated to use custom fonts */
+  --font-sans: "Primary Font", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-display: "Secondary Font", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "Primary Font", -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --color-card: var(--card);
@@ -122,8 +140,18 @@
   }
   body {
     @apply bg-background text-foreground;
-    font-family: "grafolita-script", sans-serif;
+    font-family: "Primary Font", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     font-style: normal;
     font-weight: 400;
+  }
+}
+
+@layer utilities {
+  .font-primary {
+    font-family: "Primary Font", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  }
+  
+  .font-secondary {
+    font-family: "Secondary Font", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   }
 }
